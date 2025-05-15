@@ -1,1 +1,45 @@
-Hello
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc:https://tornpa.github.io/BCL_POSTCARD/targets%20(4).mind" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
+      
+       <a-assets>
+	<img id="card1" src="https://tornpa.github.io/BCL_POSTCARD/Recherche_Visage.png" />
+         <img id="card2" src="https://tornpa.github.io/BCL_POSTCARD/Recherche_Visage%20Bas.png" />
+         <img id="card3" src="https://tornpa.github.io/BCL_POSTCARD/Recherche_Visage%20droite.png" />
+         <img id="card4" src="https://tornpa.github.io/BCL_POSTCARD/Recherche_Visage%20Gauche.png" />
+      </a-assets>
+      
+      
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      
+     
+       <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane src="#card1" opaciy="0.5" position="0 0 0" height="0.552" width="1"rotation="0 0 0"></a-plane>
+      </a-entity>
+      
+      
+        <a-entity mindar-image-target="targetIndex: 3">
+        <a-plane src="#card2" opaciy="0.5" position="0 0 0" height="0.552" width="1"           rotation="0 0 0"></a-plane>
+      </a-entity>
+      
+      
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-plane src="#card3" opaciy="0.5" position="0 0 0" height="0.552" width="1"rotation="0 0 0"></a-plane>
+      </a-entity>
+      
+      
+            <a-entity mindar-image-target="targetIndex: 2">
+        <a-plane src="#card4" opaciy="0.5" position="0 0 0" height="0.552" width="1"           rotation="0 0 0"></a-plane>
+      </a-entity>
+      
+
+      
+    </a-scene>
+  </body>
+</html>
